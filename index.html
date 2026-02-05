@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Hara | Senior Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .skill-badge { transition: all 0.3s ease; border: 1px solid #e2e8f0; }
+        .skill-badge:hover { transform: translateY(-2px); border-color: #6366f1; color: #6366f1; }
+        .exp-card { border-left: 2px solid #e2e8f0; transition: all 0.3s ease; }
+        .exp-card:hover { border-left-color: #6366f1; background: #f8fafc; }
+    </style>
+</head>
+<body class="bg-[#fafafa] text-slate-900 selection:bg-indigo-100 selection:text-indigo-700">
+
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-extrabold tracking-tighter text-indigo-600">HN.</a>
+            <div class="hidden md:flex space-x-10 text-sm font-semibold text-slate-500 uppercase tracking-widest">
+                <a href="#experience" class="hover:text-indigo-600 transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-indigo-600 transition-colors">Stack</a>
+                <a href="#education" class="hover:text-indigo-600 transition-colors">Education</a>
+                <a href="mailto:hari.kummi@gmail.com" class="text-indigo-600 border-b-2 border-indigo-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-indigo-600 font-bold tracking-widest uppercase text-xs mb-4">Senior Software Engineer</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
+                Building scalable systems at the intersection of <span class="text-indigo-600">Security & Web.</span>
+            </h1>
+            <p class="text-xl text-slate-500 max-w-2xl leading-relaxed mb-10">
+                8+ years of experience specializing in <strong>React, TypeScript, and Django</strong>. I transform complex architectural challenges into high-performance enterprise solutions.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="https://linkedin.com/in/hari-nakshatrala" target="_blank" class="px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-indigo-600 transition-all shadow-xl shadow-slate-200">
+                    <i class="fa-brands fa-linkedin-in mr-2"></i> LinkedIn
+                </a>
+                <a href="https://github.com/harihara0072" target="_blank" class="px-8 py-4 bg-white border border-slate-200 text-slate-900 rounded-full font-bold hover:bg-slate-50 transition-all">
+                    <i class="fa-brands fa-github mr-2"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-12">Technical Ecosystem</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Python / Django</div>
+                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">React / TypeScript</div>
+                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Ruby on Rails</div>
+                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">PostgreSQL / Redis</div>
+                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">AWS / Docker</div>
+                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">OAuth 2.0</div>
+                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Kubernetes</div>
+                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">GraphQL / REST</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-16">Professional Journey</h2>
+            
+            <div class="space-y-16">
+                <div class="exp-card pl-8 py-2">
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900">Senior Software Engineer</h3>
+                        <span class="text-indigo-600 font-bold text-sm">2023 — PRESENT</span>
+                    </div>
+                    <p class="text-slate-500 font-bold mb-6 italic">Security Compass | Toronto, Canada</p>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Architected a GitLab integration using OAuth 2.0 device code flow to enable secure repository scanning for Fortune 500 clients.</li>
+                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Developed a component lifecycle state machine (applicable/accepted flags) reducing manual survey updates by 60%.</li>
+                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Engineered a high-performance activity log system using deep-diff algorithms for granular audit compliance.</li>
+                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Optimized database performance using advisory locks, reducing cron job execution from 45m to 8m.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-card pl-8 py-2">
+                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                        <h3 class="text-2xl font-bold text-slate-900">Software Engineer</h3>
+                        <span class="text-slate-400 font-bold text-sm">2021 — 2023</span>
+                    </div>
+                    <p class="text-slate-500 font-bold mb-6 italic">Snapsheet | Toronto & Chicago</p>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Spearheaded Ruby on Rails microservices and TypeScript libraries for core insurance platform components.</li>
+                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Designed reusable React/Redux components to standardize frontend architecture across internal tools.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-24 px-6 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.3em] mb-12">Academic Foundation</h2>
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold">MS in Computer Science (AI & Databases)</h3>
+                <p class="text-slate-400 mt-2">University of Texas at Arlington • GPA 3.8</p>
+            </div>
+            
+            <hr class="border-slate-800 mb-12">
+            
+            <h2 class="text-3xl font-extrabold mb-8">Ready for the next challenge.</h2>
+            <div class="flex justify-center space-x-8">
+                <a href="mailto:hari.kummi@gmail.com" class="text-slate-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest underline decoration-indigo-500 underline-offset-8">Email</a>
+                <a href="https://linkedin.com/in/hari-nakshatrala" class="text-slate-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest underline decoration-indigo-500 underline-offset-8">LinkedIn</a>
+                <a href="https://github.com/harihara0072" class="text-slate-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest underline decoration-indigo-500 underline-offset-8">GitHub</a>
+            </div>
+            <p class="mt-20 text-slate-600 text-xs tracking-widest">© 2026 HARI HARA NAKSHATRALA</p>
+        </div>
+    </section>
+
+</body>
+</html>
