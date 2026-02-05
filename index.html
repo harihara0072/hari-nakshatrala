@@ -7,37 +7,43 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-        .skill-badge { transition: all 0.3s ease; border: 1px solid #e2e8f0; }
-        .skill-badge:hover { transform: translateY(-2px); border-color: #6366f1; color: #6366f1; }
-        .exp-card { border-left: 2px solid #e2e8f0; transition: all 0.3s ease; }
-        .exp-card:hover { border-left-color: #6366f1; background: #f8fafc; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-[#fafafa] text-slate-900 selection:bg-indigo-100 selection:text-indigo-700">
 
     <nav class="fixed w-full z-50 glass border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
             <a href="#" class="text-xl font-extrabold tracking-tighter text-indigo-600">HN.</a>
             <div class="hidden md:flex space-x-10 text-sm font-semibold text-slate-500 uppercase tracking-widest">
-                <a href="#experience" class="hover:text-indigo-600 transition-colors">Experience</a>
+                <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
                 <a href="#skills" class="hover:text-indigo-600 transition-colors">Stack</a>
+                <a href="#experience" class="hover:text-indigo-600 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-indigo-600 transition-colors">Projects</a>
                 <a href="#education" class="hover:text-indigo-600 transition-colors">Education</a>
-                <a href="mailto:hari.kummi@gmail.com" class="text-indigo-600 border-b-2 border-indigo-600">Contact</a>
+                <a href="mailto:harihara.mailme@gmail.com" class="text-indigo-600 border-b-2 border-indigo-600">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 px-6">
-        <div class="max-w-4xl mx-auto">
+    <main>
+        <section id="about" class="pt-32 pb-20 px-6 md:px-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-start md:gap-20">
+        <div class="flex-shrink-0 flex justify-center md:justify-start order-2 md:order-1">
+            <img src="profile.jpg" alt="Hari Hara Nakshatrala" class="w-40 h-40 md:w-72 md:h-72 rounded-full object-cover border-4 border-indigo-100 shadow-xl" onerror="this.style.display='none'">
+        </div>
+        <div class="flex-1 order-1 md:order-2 min-w-0">
             <p class="text-indigo-600 font-bold tracking-widest uppercase text-xs mb-4">Senior Software Engineer</p>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
-                Building scalable systems at the intersection of <span class="text-indigo-600">Security & Web.</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-3">
+                Clean code. Solid architecture. <span class="text-indigo-600">Systems that scale.</span>
             </h1>
-            <p class="text-xl text-slate-500 max-w-2xl leading-relaxed mb-10">
-                8+ years of experience specializing in <strong>React, TypeScript, and Django</strong>. I transform complex architectural challenges into high-performance enterprise solutions.
+            <p class="text-xl md:text-2xl text-slate-500 font-medium mb-6">
+                Building robust, scalable systems that power modern applications.
+            </p>
+            <p class="text-xl text-slate-500 leading-relaxed mb-6">
+                8+ years of experience specializing in <strong>Python, Django, React, and TypeScript</strong>. I transform complex architectural challenges into high-performance enterprise solutions—from enterprise platforms to consumer-facing products, including AI-powered applications.
+            </p>
+            <p class="text-xl text-slate-500 leading-relaxed mb-10">
+                Former engineer at <strong>Cisco</strong> and <strong>IBM</strong>. MS in Computer Science (AI & Databases) from UT Arlington. I thrive at the intersection of full-stack development, API design, and secure system architecture—delivering measurable impact through clean code and thoughtful engineering.
             </p>
             <div class="flex flex-wrap gap-4">
                 <a href="https://linkedin.com/in/hari-nakshatrala" target="_blank" class="px-8 py-4 bg-slate-900 text-white rounded-full font-bold hover:bg-indigo-600 transition-all shadow-xl shadow-slate-200">
@@ -48,77 +54,175 @@
                 </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="skills" class="py-20 px-6 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-12">Technical Ecosystem</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Python / Django</div>
-                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">React / TypeScript</div>
-                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Ruby on Rails</div>
-                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">PostgreSQL / Redis</div>
-                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">AWS / Docker</div>
-                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">OAuth 2.0</div>
-                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Kubernetes</div>
-                <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">GraphQL / REST</div>
-            </div>
+        <section id="skills" class="py-20 px-6 md:px-10 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-12">Technical Ecosystem</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Python / Django</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">React / TypeScript</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Ruby on Rails</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Flask</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">PostgreSQL / Redis</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">AWS / Docker</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Kubernetes</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">OAuth 2.0</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">GraphQL / REST</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Redux / React Query</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Material-UI</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">GitLab CI/CD</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Celery</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">Pytest / Jest / Cypress</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">State Machine Pattern</div>
+            <div class="skill-badge p-4 rounded-xl text-center font-medium text-slate-700">JSONAPI</div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="experience" class="py-24 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-16">Professional Journey</h2>
-            
-            <div class="space-y-16">
-                <div class="exp-card pl-8 py-2">
-                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
-                        <h3 class="text-2xl font-bold text-slate-900">Senior Software Engineer</h3>
-                        <span class="text-indigo-600 font-bold text-sm">2023 — PRESENT</span>
-                    </div>
-                    <p class="text-slate-500 font-bold mb-6 italic">Security Compass | Toronto, Canada</p>
-                    <ul class="space-y-4 text-slate-600">
-                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Architected a GitLab integration using OAuth 2.0 device code flow to enable secure repository scanning for Fortune 500 clients.</li>
-                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Developed a component lifecycle state machine (applicable/accepted flags) reducing manual survey updates by 60%.</li>
-                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Engineered a high-performance activity log system using deep-diff algorithms for granular audit compliance.</li>
-                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Optimized database performance using advisory locks, reducing cron job execution from 45m to 8m.</li>
-                    </ul>
+        <section id="experience" class="py-24 px-6 md:px-10">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-16">Professional Journey</h2>
+        
+        <div class="space-y-16">
+            <div class="exp-card pl-8 py-2">
+                <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-slate-900">Senior Software Engineer</h3>
+                    <span class="text-indigo-600 font-bold text-sm">2023 — PRESENT</span>
                 </div>
+                <p class="text-slate-500 font-bold mb-6 italic">Security Compass | Toronto, Canada</p>
+                <ul class="space-y-4 text-slate-600">
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Architected a GitLab integration using OAuth 2.0 device code flow to resolve wildcard subdomain limitations, enabling secure repository scanning for Fortune 500 clients.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Designed and implemented RESTful APIs for library management with comprehensive validation and permission checks, serving 100K+ daily enterprise requests.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Developed a reusable component lifecycle system using a state machine pattern to enable bulk updates across hundreds of projects, eliminating manual survey modifications for clients like Nationwide and Carrier.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Engineered a high-performance activity log system using deep-diff algorithms to capture granular state changes in diagrams, ensuring audit compliance and complete project history reconstruction.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Built interactive React/TypeScript interfaces using Material-UI and React Query with hierarchical tree views and expandable tables, improving user task completion rates by 35%.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Led the full-stack redesign of Profile and Weakness interfaces with real-time error handling (Yup schemas) and optimistic updates, reducing user-reported errors by 50%.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Optimized database performance using advisory locks, reducing cron job execution from 45m to 8m.</li>
+                </ul>
+            </div>
 
-                <div class="exp-card pl-8 py-2">
-                    <div class="flex flex-col md:flex-row md:justify-between mb-4">
-                        <h3 class="text-2xl font-bold text-slate-900">Software Engineer</h3>
-                        <span class="text-slate-400 font-bold text-sm">2021 — 2023</span>
-                    </div>
-                    <p class="text-slate-500 font-bold mb-6 italic">Snapsheet | Toronto & Chicago</p>
-                    <ul class="space-y-4 text-slate-600">
-                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Spearheaded Ruby on Rails microservices and TypeScript libraries for core insurance platform components.</li>
-                        <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Designed reusable React/Redux components to standardize frontend architecture across internal tools.</li>
-                    </ul>
+            <div class="exp-card pl-8 py-2">
+                <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-slate-900">Software Engineer</h3>
+                    <span class="text-slate-400 font-bold text-sm">2021 — 2023</span>
+                </div>
+                <p class="text-slate-500 font-bold mb-6 italic">Snapsheet | Toronto & Chicago</p>
+                <ul class="space-y-4 text-slate-600">
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Architected full-cycle features including multiple claim type support, custom provider configurations, and component validations for the core insurance platform.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Led cross-team initiative to integrate in-house libraries and establish technical paradigms across the company.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Built scalable Ruby on Rails microservices and TypeScript libraries with the platform team for reusable, enterprise-grade components.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Established and enforced JSONAPI standards for the Snapsheet API suite, making third-party integrations reliable and consistent.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Delivered a configurable multi-tenant platform for provider-specific configurations, enabling customer customization at scale.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Designed reusable React/Redux components to standardize frontend architecture across internal tools.</li>
+                </ul>
+            </div>
+
+            <div class="exp-card pl-8 py-2">
+                <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-slate-900">Software Engineer</h3>
+                    <span class="text-slate-400 font-bold text-sm">2019 — 2021</span>
+                </div>
+                <p class="text-slate-500 font-bold mb-6 italic">Cisco | San Jose, CA</p>
+                <ul class="space-y-4 text-slate-600">
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Developed Python Flask microservices for Cisco's Apollo project, containerizing applications with Docker and Kubernetes to reduce system response time by 20%.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Increased unit test coverage to 80% using Pytest, significantly reducing production regressions and enhancing system stability.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Architected a secure logging wrapper to mask sensitive data for privacy compliance prior to Cassandra storage.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Implemented REST APIs for xARC, exposing them to internal frameworks to automate test cases.</li>
+                </ul>
+            </div>
+
+            <div class="exp-card pl-8 py-2">
+                <div class="flex flex-col md:flex-row md:justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-slate-900">Associate System Engineer</h3>
+                    <span class="text-slate-400 font-bold text-sm">2015 — 2017</span>
+                </div>
+                <p class="text-slate-500 font-bold mb-6 italic">IBM | Bangalore, India</p>
+                <ul class="space-y-4 text-slate-600">
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Engineered a Python-based billing feature using REST APIs to automate price-tag calculations from Call Data Records for Telefonica.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Automated delivery workflows with Python scripts, reducing manual processing errors and consistently meeting strict SLAs.</li>
+                    <li class="flex items-start"><span class="text-indigo-500 mr-3">▹</span> Resolved critical system defects by leading end-to-end identification, diagnosis, and reporting as a system operations specialist.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="projects" class="py-24 px-6 md:px-10 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-xs font-bold text-slate-400 uppercase tracking-[0.3em] mb-16">Selected Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <a href="https://github.com/harihara0072/Movie-Web-Application" target="_blank" class="project-card block p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all group">
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-2">Movie Web Application</h3>
+                        <p class="text-slate-600 text-sm mb-4">Web app for movie info, cast, and posters using The Movie DB REST API. Built with vanilla JavaScript and AJAX—fully asynchronous, no page refresh.</p>
+                        <span class="text-xs font-medium text-indigo-600">JavaScript · REST API · AJAX</span>
+                    </a>
+                    <a href="https://github.com/harihara0072/Web-Mashup-Display-Best-Restaurants-on-a-Map" target="_blank" class="project-card block p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all group">
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-2">Restaurant Map Mashup</h3>
+                        <p class="text-slate-600 text-sm mb-4">Web mashup combining Google Maps and Yelp API. Search by cuisine, view top restaurants on the map with ratings and details.</p>
+                        <span class="text-xs font-medium text-indigo-600">JavaScript · Google Maps · Yelp API</span>
+                    </a>
+                    <a href="https://github.com/harihara0072/Pong-Game--JavaScript" target="_blank" class="project-card block p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all group">
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-2">Pong Game</h3>
+                        <p class="text-slate-600 text-sm mb-4">Classic Pong game built with vanilla JavaScript. Canvas-based gameplay with paddle controls and score tracking.</p>
+                        <span class="text-xs font-medium text-indigo-600">JavaScript · HTML5 Canvas</span>
+                    </a>
+                    <a href="https://github.com/harihara0072/Recognising-hand-written-digits-using-Hebbian-Learning-rule" target="_blank" class="project-card block p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all group">
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-2">Handwritten Digit Recognition</h3>
+                        <p class="text-slate-600 text-sm mb-4">Single-layer neural network with 10 nodes using Hebbian learning (Filtered, Delta Rule, Unsupervised). Includes confusion matrix evaluation.</p>
+                        <span class="text-xs font-medium text-indigo-600">Python · Neural Networks · Hebbian Learning</span>
+                    </a>
+                    <a href="https://github.com/harihara0072/Neural-network-to-predict-stocks-using-Adaptive-filter-ADALINE" target="_blank" class="project-card block p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all group">
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-2">Stock Prediction with ADALINE</h3>
+                        <p class="text-slate-600 text-sm mb-4">Neural network using ADALINE adaptive filter for stock price prediction. Implements multiple transfer functions and learning rules.</p>
+                        <span class="text-xs font-medium text-indigo-600">Python · ADALINE · Time Series</span>
+                    </a>
+                    <a href="https://github.com/harihara0072/K-means-clusturing-without-libraries" target="_blank" class="project-card block p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all group">
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-2">K-means Clustering</h3>
+                        <p class="text-slate-600 text-sm mb-4">K-means clustering implemented from scratch using NumPy and Matplotlib. Euclidean distance, centroid updates, accuracy on labeled data.</p>
+                        <span class="text-xs font-medium text-indigo-600">Python · NumPy · Machine Learning</span>
+                    </a>
+                    <a href="https://github.com/harihara0072/Perceptron-that-seperates-to-two-classes" target="_blank" class="project-card block p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all group">
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-2">Perceptron Classifier</h3>
+                        <p class="text-slate-600 text-sm mb-4">Single-neuron perceptron with interactive decision boundary visualization. Configurable weights, bias, transfer functions, and training.</p>
+                        <span class="text-xs font-medium text-indigo-600">Python · Perceptron · Decision Boundaries</span>
+                    </a>
+                    <a href="https://github.com/harihara0072/Apple-iTunes-Charts--Web-scraping" target="_blank" class="project-card block p-6 rounded-xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition-all group">
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-2">iTunes Charts Web Scraper</h3>
+                        <p class="text-slate-600 text-sm mb-4">Python scripts to scrape Apple iTunes Charts—songs, albums, apps, books, movies, TV shows. Exports rankings to structured data files.</p>
+                        <span class="text-xs font-medium text-indigo-600">Python · Web Scraping · Data Extraction</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="education" class="py-24 px-6 bg-slate-900 text-white">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.3em] mb-12">Academic Foundation</h2>
-            <div class="mb-12">
-                <h3 class="text-2xl font-bold">MS in Computer Science (AI & Databases)</h3>
-                <p class="text-slate-400 mt-2">University of Texas at Arlington • GPA 3.8</p>
-            </div>
-            
-            <hr class="border-slate-800 mb-12">
-            
-            <h2 class="text-3xl font-extrabold mb-8">Ready for the next challenge.</h2>
-            <div class="flex justify-center space-x-8">
-                <a href="mailto:hari.kummi@gmail.com" class="text-slate-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest underline decoration-indigo-500 underline-offset-8">Email</a>
-                <a href="https://linkedin.com/in/hari-nakshatrala" class="text-slate-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest underline decoration-indigo-500 underline-offset-8">LinkedIn</a>
-                <a href="https://github.com/harihara0072" class="text-slate-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest underline decoration-indigo-500 underline-offset-8">GitHub</a>
-            </div>
-            <p class="mt-20 text-slate-600 text-xs tracking-widest">© 2026 HARI HARA NAKSHATRALA</p>
+        <section id="education" class="py-24 px-6 md:px-10 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-xs font-bold text-indigo-400 uppercase tracking-[0.3em] mb-12">Academic Foundation</h2>
+        <div class="mb-8">
+            <h3 class="text-2xl font-bold">MS in Computer Science (AI & Databases)</h3>
+            <p class="text-slate-400 mt-2">University of Texas at Arlington • GPA 3.8 • May 2019</p>
+            <p class="text-slate-500 mt-4 text-sm max-w-3xl mx-auto">Relevant Coursework: Artificial Intelligence, Machine Learning, Database Systems, Advanced Algorithms, Data Mining</p>
         </div>
-    </section>
+        <div class="mb-12">
+            <h3 class="text-xl font-bold text-slate-300">BTech in Electrical and Electronics Engineering</h3>
+            <p class="text-slate-500 mt-2">Jawaharlal Nehru Technological University, India • GPA 3.5 • May 2013</p>
+        </div>
+        
+        <hr class="border-slate-800 mb-12">
+        
+        <h2 class="text-3xl font-extrabold mb-8">Ready for the next challenge.</h2>
+        <div class="flex justify-center space-x-8">
+            <a href="mailto:harihara.mailme@gmail.com" class="text-slate-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest underline decoration-indigo-500 underline-offset-8">Email</a>
+            <a href="https://linkedin.com/in/hari-nakshatrala" class="text-slate-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest underline decoration-indigo-500 underline-offset-8">LinkedIn</a>
+            <a href="https://github.com/harihara0072" class="text-slate-400 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest underline decoration-indigo-500 underline-offset-8">GitHub</a>
+        </div>
+        <p class="mt-20 text-slate-600 text-xs tracking-widest">© 2026 HARI HARA NAKSHATRALA</p>
+    </div>
+</section>
+
+    </main>
 
 </body>
 </html>
